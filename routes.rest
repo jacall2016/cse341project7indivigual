@@ -83,21 +83,23 @@ DELETE http://localhost:3000/contemporary_issues/6517a02cd732e533e782c4c3 HTTP/1
 GET http://localhost:3000/cuisine/651771bacab7309c4cbd1d9c
 
 {
-  "name":"taco",
-  "ingredients":[{"name":"chicken",
-              "quantity":"12 grams"}],
-  "preparation":"shred chicken",
-  "serving_and_presentation":"serve on plates",
-  "cultural_significance":"mesoamerican culture",
-  "taist_profile":"spicy",
-  "variations":["651f58d39881335e3dd2bd07"]}
+  
+}
 
 ### create cuisine
 POST http://localhost:3000/cuisine HTTP/1.1
 Content-Type: application/json
 
 {
-    
+  "name":"strawberry cheasecake",
+  "ingredients":[{"name":"strawberries",
+                  "quantity":"3",
+                  "preparation":"cut up strawbarries"}],
+  "mealPreparation":"cut up strawbarries",
+  "serving_and_presentation":"put candles on cake",
+  "cultural_significance":"birthdays",
+  "taste_profile":"sweet",
+  "variations":["65257b7a6e88355ca863429c"]
 }
 
 ### PUT cuisine
@@ -105,7 +107,15 @@ PUT http://localhost:3000/cuisine/65188ab2d49146395a850647 HTTP/1.1
 Content-Type: application/json
 
 {
-   
+   "name":"taco",
+  "ingredients":[{"name":"chicken",
+              "quantity":"12 grams",
+              "preparation":"shread chicken"}],
+  "mealPreparation":"shred chicken",
+  "serving_and_presentation":"serve on plates",
+  "cultural_significance":"mesoamerican culture",
+  "taste_profile":"spicy",
+  "variations":["651f58d39881335e3dd2bd07"]
 }
 
 

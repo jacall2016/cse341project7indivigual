@@ -65,7 +65,7 @@ const createCuisine = async (req, res) => {
     const cuisine = {
         name: req.body.name,
         ingredients: req.body.ingredients,
-        preparation: req.body.preparation,
+        mealPreparation: req.body.mealPreparation,
         cultural_significance: req.body.cultural_significance,
         serving_and_presentation: req.body.serving_and_presentation,
         taste_profile: req.body.taste_profile,
@@ -95,7 +95,7 @@ const updateCuisine = async (req, res) => {
     const cuisine = {
         name: req.body.name,
         ingredients: req.body.ingredients,
-        preparation: req.body.preparation,
+        mealPreparation: req.body.mealPreparation,
         cultural_significance: req.body.cultural_significance,
         serving_and_presentation: req.body.serving_and_presentation,
         taste_profile: req.body.taste_profile,
@@ -123,7 +123,7 @@ const deleteCuisine = async (req, res) => {
     // Convert the request parameter to a valid ObjectId
     const cuisineId = new ObjectId(req.params.id);
     // Delete the cuisine entry with the specified ID from the database
-    const response = await mongodb.getDatabase().db().collection('cuisines').deleteOne({ _id: cuisineId });
+    const response = await mongodb.getDatabase().db().collection('cuisine').deleteOne({ _id: cuisineId });
     if (response.deletedCount > 0) {
         // If deletion is successful, send a 204 No Content response
         res.status(204).send();
